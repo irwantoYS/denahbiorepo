@@ -6,7 +6,8 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var app\models\Datapengunjung $model */
 
-$this->title = $model->id;
+
+$this->title = $model->nama;
 $this->params['breadcrumbs'][] = ['label' => 'Identitas Diri', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -38,4 +39,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+<?= html::img("@web/img/denah.jpeg") ?>
 </div>
