@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\DatapengunjungSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Data Pengunjung';
+$this->title = 'History Pengunjung';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="datapengunjung-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Tambah Data Pengunjung', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Tambah Identitas', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
