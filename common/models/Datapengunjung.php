@@ -1,17 +1,16 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use Yii;
 
 /**
  * This is the model class for table "datapengunjung".
  *
- * @property int $id
- * @property string $nama
- * @property int $id_pegawai
+ * @property int $id_pengunjung
+ * @property string $nama_lengkap
  * @property string $tanggal
- * @property string $jam
+ * @property string $waktu
  * @property string $keperluan
  */
 class Datapengunjung extends \yii\db\ActiveRecord
@@ -30,11 +29,11 @@ class Datapengunjung extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama', 'id_pegawai', 'tanggal', 'jam', 'keperluan'], 'required'],
-            [['id_pegawai'], 'integer'],
-            [['tanggal', 'jam'], 'safe'],
-            [['nama'], 'string', 'max' => 100],
-            [['keperluan'], 'string', 'max' => 150],
+            [['id_pengunjung', 'nama_lengkap', 'tanggal', 'waktu', 'keperluan'], 'required'],
+            [['id_pengunjung'], 'integer'],
+            [['tanggal', 'waktu'], 'safe'],
+            [['nama_lengkap', 'keperluan'], 'string', 'max' => 250],
+            [['id_pengunjung'], 'unique'],
         ];
     }
 
@@ -44,11 +43,10 @@ class Datapengunjung extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'nama' => 'Nama',
-            'id_pegawai' => 'Id Pegawai',
+            'id_pengunjung' => 'Id Pengunjung',
+            'nama_lengkap' => 'Nama Lengkap',
             'tanggal' => 'Tanggal',
-            'jam' => 'Jam',
+            'waktu' => 'Waktu',
             'keperluan' => 'Keperluan',
         ];
     }

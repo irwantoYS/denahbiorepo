@@ -1,16 +1,16 @@
 <?php
 
-use app\models\Datapengunjung;
+use common\models\Datapengunjung;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\DatapengunjungSearch $searchModel */
+/** @var common\models\DatapengunjungSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Data Pengunjung';
+$this->title = 'Datapengunjungs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="datapengunjung-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Tambah Data Pengunjung', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Datapengunjung', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,16 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'nama',
-            'id_pegawai',
+            'id_pengunjung',
+            'nama_lengkap',
             'tanggal',
-            'jam',
-            //'keperluan',
+            'waktu',
+            'keperluan',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Datapengunjung $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
+                    return Url::toRoute([$action, 'id_pengunjung' => $model->id_pengunjung]);
                  }
             ],
         ],

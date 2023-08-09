@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\DatapengunjungSearch $model */
+/** @var common\models\DatapengunjungSearch $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -15,17 +15,15 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'id_pengunjung') ?>
 
-    <?= $form->field($model, 'nama') ?>
-
-    <?= $form->field($model, 'id_pegawai') ?>
+    <?= $form->field($model, 'nama_lengkap') ?>
 
     <?= $form->field($model, 'tanggal') ?>
 
-    <?= $form->field($model, 'jam') ?>
+    <?= $form->field($model, 'waktu') ?>
 
-    <?php // echo $form->field($model, 'keperluan') ?>
+    <?= $form->field($model, 'keperluan') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

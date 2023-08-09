@@ -1,13 +1,13 @@
 <?php
 
-namespace app\models;
+namespace common\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Datapengunjung;
+use common\models\Datapengunjung;
 
 /**
- * DatapengunjungSearch represents the model behind the search form of `app\models\Datapengunjung`.
+ * DatapengunjungSearch represents the model behind the search form of `common\models\Datapengunjung`.
  */
 class DatapengunjungSearch extends Datapengunjung
 {
@@ -17,8 +17,8 @@ class DatapengunjungSearch extends Datapengunjung
     public function rules()
     {
         return [
-            [['id', 'id_pegawai'], 'integer'],
-            [['nama', 'tanggal', 'jam', 'keperluan'], 'safe'],
+            [['id_pengunjung'], 'integer'],
+            [['nama_lengkap', 'tanggal', 'waktu', 'keperluan'], 'safe'],
         ];
     }
 
@@ -58,13 +58,12 @@ class DatapengunjungSearch extends Datapengunjung
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'id_pegawai' => $this->id_pegawai,
+            'id_pengunjung' => $this->id_pengunjung,
             'tanggal' => $this->tanggal,
-            'jam' => $this->jam,
+            'waktu' => $this->waktu,
         ]);
 
-        $query->andFilterWhere(['like', 'nama', $this->nama])
+        $query->andFilterWhere(['like', 'nama_lengkap', $this->nama_lengkap])
             ->andFilterWhere(['like', 'keperluan', $this->keperluan]);
 
         return $dataProvider;

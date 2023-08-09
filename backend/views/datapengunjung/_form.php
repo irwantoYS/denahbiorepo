@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\Datapengunjung $model */
+/** @var common\models\Datapengunjung $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -12,13 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'id_pengunjung')->textInput() ?>
 
-    <?= $form->field($model, 'id_pegawai')->textInput() ?>
+    <?= $form->field($model, 'nama_lengkap')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tanggal')->textInput() ?>
 
-    <?= $form->field($model, 'jam')->textInput() ?>
+    <?= $form->field($model, 'waktu')->textInput() ?>
 
     <?= $form->field($model, 'keperluan')->textInput(['maxlength' => true]) ?>
 
