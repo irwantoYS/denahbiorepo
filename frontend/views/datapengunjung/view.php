@@ -38,6 +38,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'keperluan',
         ],
     ]) ?>
-
-<?= html::img("@web/img/denah.jpeg") ?>
+ <div style="text-align: center;">
+        <?= Html::img("@web/img/Group16.png", ['style' => 'max-width: 80%;']) ?>
+    </div>
+<!-- <?= html::img("@web/img/denah.jpeg") ?> -->
 </div>
