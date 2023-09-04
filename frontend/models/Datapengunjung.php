@@ -13,6 +13,7 @@ use Yii;
  * @property string $tanggal
  * @property string $jam
  * @property string $keperluan
+ * @property string $freezer
  */
 class Datapengunjung extends \yii\db\ActiveRecord
 {
@@ -30,11 +31,12 @@ class Datapengunjung extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama', 'id_pegawai', 'tanggal', 'jam', 'keperluan'], 'required'],
+            [['nama', 'id_pegawai', 'tanggal', 'jam', 'keperluan', 'freezer'], 'required'],
             [['id_pegawai'], 'integer'],
             [['tanggal', 'jam'], 'safe'],
             [['nama'], 'string', 'max' => 100],
             [['keperluan'], 'string', 'max' => 150],
+            [['freezer'], 'string', 'max' => 255],
         ];
     }
 
@@ -50,6 +52,7 @@ class Datapengunjung extends \yii\db\ActiveRecord
             'tanggal' => 'Tanggal',
             'jam' => 'Jam',
             'keperluan' => 'Keperluan',
+            'freezer' => 'freezer',
         ];
     }
 }

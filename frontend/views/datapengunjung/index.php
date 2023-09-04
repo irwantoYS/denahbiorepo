@@ -34,7 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_pegawai',
             'tanggal',
             'jam',
-            //'keperluan',
+            'keperluan',
+            'freezer',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Datapengunjung $model, $key, $index, $column) {

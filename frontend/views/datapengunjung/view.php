@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'tanggal',
             'jam',
             'keperluan',
+            'freezer',
         ],
     ]) ?>
  <div style="text-align: center;">

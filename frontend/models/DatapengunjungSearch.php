@@ -18,7 +18,7 @@ class DatapengunjungSearch extends Datapengunjung
     {
         return [
             [['id', 'id_pegawai'], 'integer'],
-            [['nama', 'tanggal', 'jam', 'keperluan'], 'safe'],
+            [['nama', 'tanggal', 'jam', 'keperluan', 'freezer'], 'safe'],
         ];
     }
 
@@ -62,6 +62,8 @@ class DatapengunjungSearch extends Datapengunjung
             'id_pegawai' => $this->id_pegawai,
             'tanggal' => $this->tanggal,
             'jam' => $this->jam,
+            'keperluan' => $this->keperluan,
+            'freezer' => $this->freezer,
         ]);
 
         $query->andFilterWhere(['like', 'nama', $this->nama])

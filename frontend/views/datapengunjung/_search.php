@@ -25,6 +25,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'jam') ?>
 
+    <?= $form->field($model, 'freezer') ?>
+
     <?php // echo $form->field($model, 'keperluan') ?>
 
     <div class="form-group">
